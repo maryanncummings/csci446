@@ -1,0 +1,12 @@
+happy(john).
+listensToMusic(ben).
+listensToMusic(john):-happy(john).
+playsAirGuitar(ben):-
+	listensToMusic(ben).
+playsAirGuitar(ben):-
+	happy(ben).
+playsAirGuitar(john):-
+    listensToMusic(john),
+	happy(john).
+playsAirGuitar(sam):-
+	happy(sam).

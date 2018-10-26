@@ -1,0 +1,14 @@
+GPLC = gplc
+#CFLAGS='-Wall -g'
+CFLAGS=-O
+
+EXECS=cp_example
+
+cp_example: cp_example.pl cp_example.c 
+	$(GPLC) -C '$(CFLAGS)' cp_example.pl cp_example.c
+
+clean:
+	rm -f $(EXECS) *.exe
+
+
+
